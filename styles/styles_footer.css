@@ -14,7 +14,7 @@ footer{
 	width: 100%;
 	background-color: #e6e6e6;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: calc(14px * var(--font-size));
 	padding-bottom: 50px;
 }
 footer .horizontal_line{
@@ -34,7 +34,7 @@ footer div a:first-of-type{
 	color: #4c4c4c;
 	padding: 30px 10px;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: calc(16px * var(--font-size));
 }
 @media (min-width: 992px) { /* xl and l */
 	footer{

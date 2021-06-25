@@ -10,3 +10,7 @@ function hide_menu() {
 	hamburger.setAttribute('onclick','show_menu()');
 	menu.classList.add('hidden_m_s');
 }
+
+function set_font_size(x) {
+	document.documentElement.style.setProperty('--font-size', x);
+}
