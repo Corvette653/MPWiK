@@ -1,7 +1,7 @@
 :root {
 	--font-size: 1;
 	--menu-color: #303384;
-	--hoovered-menu-color: #006292;
+	--hoovered-menu-color: #1086b7;
 	--footer-background-color: #e6e6e6;
 	--footer-text-color: #666666;
 	--footer-header-color: #4c4c4c;
@@ -52,6 +52,7 @@ h1{
 	margin-top: 15px;
 	color: var(--dimgray-color);
 	float: right;
+	color: var(--red-color);
 }
 #call_button i{
 	font-size: calc(32px * var(--font-size));
@@ -70,7 +71,6 @@ h1{
 	float: left;
 }
 #call_button span:nth-of-type(1){
-	color: var(--red-color);
 	font-size: calc(18px * var(--font-size));
 }
 #call_button span:nth-of-type(2){

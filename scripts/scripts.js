@@ -25,7 +25,7 @@ function hide_menu() {
 function set_inverted_colors() {
 	contrast.setAttribute('onclick', 'set_normal_colors()');
 	document.documentElement.style.setProperty('--menu-color', '#cfcc7b');
-	document.documentElement.style.setProperty('--hoovered-menu-color', '#ff9d6d');
+	document.documentElement.style.setProperty('--hoovered-menu-color', '#ef7948');
 	document.documentElement.style.setProperty('--white-color', 'black');
 	document.documentElement.style.setProperty('--red-color', 'aqua');
 	document.documentElement.style.setProperty('--black-color', 'white');
@@ -42,7 +42,7 @@ function set_inverted_colors() {
 function set_normal_colors() {
 	contrast.setAttribute('onclick', 'set_inverted_colors()');
 	document.documentElement.style.setProperty('--menu-color', '#303384');
-	document.documentElement.style.setProperty('--hoovered-menu-color', '#006292');
+	document.documentElement.style.setProperty('--hoovered-menu-color', '#1086b7');
 	document.documentElement.style.setProperty('--white-color', 'white');
 	document.documentElement.style.setProperty('--red-color', 'red');
 	document.documentElement.style.setProperty('--black-color', 'black');
