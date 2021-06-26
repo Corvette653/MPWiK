@@ -3,6 +3,15 @@ var menu = document.getElementById("menu");
 var contrast = document.getElementById("contrast_mode");
 var logo = document.getElementById("logo");
 
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	set_inverted_colors();
+	document.getElementsByTagName("link")[2].href = "photos/logo_inverted.png"
+}
+else {
+	set_normal_colors();
+}
+
 function show_menu() {
 	hamburger.setAttribute('onclick','hide_menu()');
 	menu.classList.remove('hidden_m_s');
