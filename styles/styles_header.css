@@ -1,16 +1,29 @@
 :root {
 	--font-size: 1;
+	--menu-color: #303384;
+	--hoovered-menu-color: #006292;
+	--footer-background-color: #e6e6e6;
+	--footer-text-color: #666666;
+	--footer-header-color: #4c4c4c;
+	--footer-line-color: #cccccc;
+	--white-color: white;
+	--red-color: red;
+	--black-color: black;
+	--dimgray-color:  dimgray;
 }
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 }
-header div {
+body{
+	background-color: var(--white-color);
+}
+header div{
 	float: left;
 }
 .horizontal_line_header{
-	background-color: #006292;
+	background-color: var(--hoovered-menu-color);
 	height: 5px;
 	width: 100%;
 }
@@ -28,7 +41,7 @@ header{
 /******************************************************************************************************/
 #call_button{
 	margin: 24px; /* (header - menu - call) / 2 = (180 - 70 - 62) / 2 = 24 */
-	color: dimgray;
+	color: var(--dimgray-color);
 	float: right;
 }
 #call_button i{
@@ -39,8 +52,8 @@ header{
 	float: left;
 }
 #call_button:hover i{
-	background-color: red;
-	color: white;
+	background-color: var(--red-color);
+	color: var(--white-color);
 }
 #call_button div{
 	margin-left: 20px;
@@ -48,7 +61,7 @@ header{
 	float: left;
 }
 #call_button span:nth-of-type(1){
-	color: red;
+	color: var(--red-color);
 	font-size: calc(18px * var(--font-size));
 }
 #call_button span:nth-of-type(2){
@@ -57,7 +70,7 @@ header{
 /******************************************************************************************************/
 #font_size{
 	font-family: Arial, Helvetica, sans-serif;
-	color: black;
+	color: var(--black-color);
 	font-weight: bold;
 	float: right;
 	padding: 15px;
@@ -70,7 +83,7 @@ header{
 	margin-right: 9px;
 }
 #font_size span:nth-of-type(2){
-	color: red;
+	color: var(--red-color);
 }
 #font_size span:last-of-type{
 	font-size: 19px;
@@ -82,20 +95,21 @@ header{
 	float: right;
 	cursor: pointer;
 	font-size: 19px;
+	color: var(--black-color);
 }
 /******************************************************************************************************/
 #menu{
 	position: absolute;
-	background-color: #303384;
+	background-color: var(--menu-color);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: calc(18px * var(--font-size));
 }
 #menu a{
 	transition: 0.2s;
-	color: white;
+	color: var(--white-color);
 }
 #menu a:hover{
-	background-color: #006292;
+	background-color: var(--hoovered-menu-color);
 }
 /******************************************************************************************************/
 @media (min-width: 1200px) { /*xl*/
