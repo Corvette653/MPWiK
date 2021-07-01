@@ -130,6 +130,7 @@
 }
 #must_see a{
     display: inline-block;
+    position: relative;
     color: var(--footer-text-color);
     padding: 10px;
     border: 2px solid var(--hoovered-menu-color);
@@ -229,7 +230,7 @@
         position: static;
         float: left;
         background-color: var(--gallery-background-color_4);
-        font-size: calc(36px * var(--font-size));
+        font-size: calc(26px * var(--font-size));
     }
     #gallery a:last-of-type{
         background-color: var(--gallery-background-color_3);
@@ -248,7 +249,9 @@
         display: none;
     }
     #must_see a:nth-of-type(4) img{
-        margin-left: 0px;
+        position: absolute;
+        right: 10px;
+        top: 15px;
         content: url('../photos/ibok_logo_small.png');
     }
     #must_see a{

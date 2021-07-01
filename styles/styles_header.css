@@ -236,6 +236,11 @@ h1{
 	h1{
 		display: none;
 	}
+	#logo{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
 	#call_button{
 		margin-top: 41px; /* (header - call) / 2 = (180 - 98) / 2 = 41 */
 		margin-right: 15px;

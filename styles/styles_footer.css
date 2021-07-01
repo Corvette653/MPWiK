@@ -21,6 +21,7 @@ footer .horizontal_line{
 	background-color: var(--footer-line-color);
 	height: 1px;
 	width: 100%;
+	margin: 0px;
 }
 footer div{
 	float: left;

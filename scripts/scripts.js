@@ -4,19 +4,21 @@ var contrast = document.getElementById("contrast_mode");
 var logo = document.getElementById("logo");
 var animation = document.querySelector("#animation div");
 var animation_link = document.getElementById("animation");
+var zsku = document.querySelector("#must_see a:nth-of-type(6) img");
 var animation_pointer_1 = document.querySelector(".animation_buttons:nth-of-type(1) span:nth-of-type(2)");
 var animation_pointer_2 = document.querySelector(".animation_buttons:nth-of-type(1) span:nth-of-type(1)");
 var animation_pointer_3 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(2)");
 var animation_pointer_4 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(1)");
 
 
-// if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-// 	set_inverted_colors();
-// 	document.getElementsByTagName("link")[2].href = "photos/logo_inverted.png"
-// }
-// else {
-// 	set_normal_colors();
-// }
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	// set_inverted_colors();
+	document.getElementsByTagName("link")[0].href = "photos/logo_inverted.png";
+}
+else {
+	// set_normal_colors();
+	document.getElementsByTagName("link")[0].href = "photos/logo.png";
+}
 
 var animationId = window.setInterval(animate, 10000);
 
@@ -46,6 +48,8 @@ function set_slide_1() {
 	animation_pointer_3.classList.add('current_slide');
 	animation_pointer_2.classList.remove('current_slide');
 	animation_pointer_4.classList.remove('current_slide');
+	window.clearInterval(animationId);
+	animationId = window.setInterval(animate, 10000);
 }
 
 function set_slide_2() {
@@ -55,6 +59,8 @@ function set_slide_2() {
 	animation_pointer_3.classList.remove('current_slide');
 	animation_pointer_2.classList.add('current_slide');
 	animation_pointer_4.classList.add('current_slide');
+	window.clearInterval(animationId);
+	animationId = window.setInterval(animate, 10000);
 }
 
 function show_menu() {
@@ -79,9 +85,14 @@ function set_inverted_colors() {
 	document.documentElement.style.setProperty('--footer-text-color', '#999999');
 	document.documentElement.style.setProperty('--footer-header-color', '#b3b3b3');
 	document.documentElement.style.setProperty('--footer-line-color', '#333333');
+	document.documentElement.style.setProperty('--gallery-background-color_1', 'rgba(239, 121, 72, 0.2)');
+	document.documentElement.style.setProperty('--gallery-background-color_2', 'rgba(239, 121, 72, 0.35)');
+	document.documentElement.style.setProperty('--gallery-background-color_3', 'rgba(239, 121, 72, 0.7)');
+	document.documentElement.style.setProperty('--gallery-background-color_4', 'rgba(239, 121, 72, 0.4)');
+	document.documentElement.style.setProperty('--gallery-background-color_5', 'rgba(239, 121, 72, 1)');
 	logo.setAttribute('src', 'photos/logo_inverted.png');
 	hamburger.setAttribute('src', 'photos/hamburger_inverted.png');
-
+	zsku.setAttribute('src', 'photos/zsku_logo_inverted.png');
 }
 
 function set_normal_colors() {
@@ -96,8 +107,14 @@ function set_normal_colors() {
 	document.documentElement.style.setProperty('--footer-text-color', '#666666');
 	document.documentElement.style.setProperty('--footer-header-color', '#4c4c4c');
 	document.documentElement.style.setProperty('--footer-line-color', '#cccccc');
+	document.documentElement.style.setProperty('--gallery-background-color_1', 'rgba(16, 134, 183, 0.2)');
+	document.documentElement.style.setProperty('--gallery-background-color_2', 'rgba(16, 134, 183, 0.35)');
+	document.documentElement.style.setProperty('--gallery-background-color_3', 'rgba(16, 134, 183, 0.7)');
+	document.documentElement.style.setProperty('--gallery-background-color_4', 'rgba(16, 134, 183, 0.4)');
+	document.documentElement.style.setProperty('--gallery-background-color_5', 'rgba(16, 134, 183, 1)');
 	logo.setAttribute('src', 'photos/logo.png');
 	hamburger.setAttribute('src', 'photos/hamburger.png');
+	zsku.setAttribute('src', 'photos/zsku_logo.png');
 }
 
 function set_font_size(x) {
