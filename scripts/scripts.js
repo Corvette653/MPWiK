@@ -11,6 +11,46 @@ var animation_pointer_3 = document.querySelector(".animation_buttons:nth-of-type
 var animation_pointer_4 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(1)");
 
 
+
+function createCookie(fieldname, fieldvalue, expiry) {
+	var date = new Date();
+	date.setTime(date.getTime()+ (expiry*24*60*60*1000));
+	var expires = "expires=" + date.toGMTString();
+	document.cookie = fieldname + "=" + fieldvalue
+	+ ";" + expires + ";path=/";
+}
+
+
+function readCookie(cname) {
+	var name = cname + "=";
+	var decoded_cookie = 
+	decodeURIComponent(document.cookie);
+	var carr = decoded_cookie.split(';');
+	for(var i=0; i<carr.length;i++){
+		var c = carr[i];
+		while(c.charAt(0)==' '){
+			c=c.substring(1);
+		}
+		if(c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+
+var user = readCookie("username");
+if(user != ""){
+	alert("Hello "+user);
+}else{
+	user=prompt("Enter your name: ", "");
+	if(user!= "" && user!=null){
+		createCookie("username", user, 30);
+	}
+}
+
+
+
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	// set_inverted_colors();
 	document.getElementsByTagName("link")[0].href = "photos/logo_inverted.png";
