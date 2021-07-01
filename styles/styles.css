@@ -1,0 +1,257 @@
+#animation div{
+    position: relative;
+    width: 50%;
+    height: 0px;
+    padding-bottom: calc(50% / 800 * 533);
+    background-image: url(../photos/home_animation.png);
+    background-size: 200% 100%;
+    transition: 0.5s;
+    float: left;
+}
+/******************************************************************************************************/
+#gallery{
+    position: relative;
+    width: 50%;
+    padding-bottom: calc(50% / 800 * 533);
+    background-image: url(../photos/water.png);
+    background-size: 100%;
+    float: left;
+}
+#gallery a{
+    padding: 60px 0px;
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+    background-color: var(--gallery-background-color_1);
+    color: white;
+    font-size: calc(26px * var(--font-size));
+    font-weight: bold;
+    text-align: center;
+}
+#gallery a:last-of-type{
+    right: 0px;
+    background-color: var(--gallery-background-color_2);
+}
+#gallery a:hover{
+    background-color: var(--gallery-background-color_3);
+}
+/******************************************************************************************************/
+.animation_buttons{
+    clear: both;
+    position: relative;
+    width: 50%;
+}
+.animation_buttons span{
+    position: absolute;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--footer-background-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.animation_buttons span:nth-of-type(1){
+    right: 10px;
+}
+.animation_buttons span:nth-of-type(2){
+    right: 40px;
+}
+.current_slide{
+    background-color: var(--red-color) !important;
+}
+/******************************************************************************************************/
+#news{
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+}
+#news a{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding: 40px;
+    color: var(--dimgray-color);
+    font-size: calc(14px * var(--font-size));
+}
+#news a:hover{
+    /*border: 2px solid var(--dimgray-color);*/
+    box-shadow: inset 0px 0px 10px 1px var(--dimgray-color);
+}
+#news span{
+    display: inline-block;
+    padding: 5px;
+}
+#news span:last-of-type{
+    padding-top: 20px;
+    color: var(--black-color);
+    font-size: calc(24px * var(--font-size));
+}
+#news a:nth-child(3){
+    clear: left;
+}
+/******************************************************************************************************/
+.horizontal_line{
+    height: 1px;
+    width: calc(100% - 100px);
+    background-color: var(--dimgray-color);
+    clear: both;
+    margin: 0px 50px;
+}
+/******************************************************************************************************/
+#miscellaneous{
+    width: 100%;
+    clear: both;
+    padding-top: 0px;
+    font-size: calc(28px * var(--font-size));
+}
+#miscellaneous a{
+    width: 25%;
+    padding: 60px;
+    display: inline-block;
+    color: var(--black-color);
+}
+#miscellaneous a span{
+    transition: 0.5s;
+}
+#miscellaneous a:hover span:first-of-type{
+    color: var(--hoovered-menu-color);
+}
+#miscellaneous a span:last-of-type{
+    color: var(--dimgray-color);
+    font-size: calc(14px * var(--font-size));
+}
+/******************************************************************************************************/
+#must_see{
+    text-align: center;
+}
+#must_see div{
+    color: var(--hoovered-menu-color);
+    font-size: calc(22px * var(--font-size));
+}
+#must_see a{
+    display: inline-block;
+    color: var(--footer-text-color);
+    padding: 10px;
+    border: 2px solid var(--hoovered-menu-color);
+    line-height: 40px;
+    margin: 10px;
+    margin-right: 0px;
+    text-align: left;
+    font-size: calc(15px * var(--font-size));
+}
+#must_see img{
+    height: 40px;
+    float: right;
+}
+#must_see a:nth-of-type(2) img, #must_see a:nth-of-type(4) img{
+    margin-top: 5px;
+    height: 30px;
+    margin-left: 20px;
+}
+#must_see a:hover{
+    color: var(--hoovered-menu-color);
+}
+/******************************************************************************************************/
+@media (min-width: 1200px) { /* xl */
+    .animation_buttons:nth-of-type(1) {
+        display: none;
+    }
+    #must_see a:nth-of-type(1), #must_see a:nth-of-type(3){
+        width: 26%;
+    }
+    #must_see a:nth-of-type(4){
+        display: none;
+    }
+    #must_see a:nth-of-type(5), #must_see a:nth-of-type(6){
+        width: 22%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) { /* l */
+    .animation_buttons:nth-of-type(1) {
+        display: none;
+    }
+    #miscellaneous a{
+        width: 50%;
+    }
+    #must_see a:nth-of-type(2){
+        display: none;
+    }
+    #must_see a:nth-of-type(1), #must_see a:nth-of-type(3){
+        width: 38%;
+    }
+    #must_see a:nth-of-type(5), #must_see a:nth-of-type(6){
+        width: 30%;
+    }
+}
+/******************************************************************************************************/
+@media (max-width: 991px) { /* m and s */
+    #animation div{
+        width: 100%;
+        padding-bottom: calc(100% / 800 * 533);
+    }
+    .animation_buttons{
+        width: 100%;
+    }
+    .animation_buttons:nth-of-type(3){
+        display: none;
+    }
+}
+/******************************************************************************************************/
+@media (min-width: 768px) and (max-width: 991px) { /* m */
+    #gallery{
+        width: 100%;
+        padding-bottom: calc(100% / 800 * 533);
+    }
+    #gallery a{
+        font-size: calc(36px * var(--font-size));
+    }
+    #miscellaneous a{
+        width: 50%;
+    }
+    #must_see a:nth-of-type(2){
+        display: none;
+    }
+    #must_see a:nth-of-type(1), #must_see a:nth-of-type(3){
+        width: 42%;
+    }
+    #must_see a:nth-of-type(5), #must_see a:nth-of-type(6){
+        width: 34%;
+    }
+}
+/******************************************************************************************************/
+@media (max-width: 767px) { /* s */
+    #gallery{
+        width: 100%;
+        padding-bottom: 0px;
+        background-image: none;
+    }
+    #gallery a{
+        position: static;
+        float: left;
+        background-color: var(--gallery-background-color_4);
+        font-size: calc(36px * var(--font-size));
+    }
+    #gallery a:last-of-type{
+        background-color: var(--gallery-background-color_3);
+    }
+    #gallery a:hover{
+        background-color: var(--gallery-background-color_5);
+    }
+    #news a{
+        width: 100%;
+    }
+    #miscellaneous a{
+        width: 100%;
+        padding: 30px 40px;
+    }
+    #must_see a:nth-of-type(2){
+        display: none;
+    }
+    #must_see a:nth-of-type(4) img{
+        margin-left: 0px;
+        content: url('../photos/ibok_logo_small.png');
+    }
+    #must_see a{
+        width: 90%;
+    }
+}

@@ -1,112 +1,198 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8"/>
 	<title>MPWiK - PAGE</title>
-	<link rel="stylesheet" href="styles/styles_header.css">
-	<link rel="stylesheet" href="styles/styles_footer.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/ec16570d0b.js" crossorigin="anonymous"></script>
-	<link rel="icon" type="image/png" href="photos/logo.png" sizes="1024x1016" />
+	<link href="styles/styles_header.css" rel="stylesheet"/>
+	<link href="styles/styles_footer.css" rel="stylesheet"/>
+	<link href="styles/styles.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/ec16570d0b.js"></script>
+    <link href="photos/logo.png" rel="icon" sizes="1024x1016" type="image/png"/>
 </head>
 <body>
 	<header>
-		<a href=""><img src="photos/logo.png" alt="logo MPWiK" id="logo"></a> <!-- MPWiK icon -->
+		<a href=""><img alt="logo MPWiK" id="logo" src="photos/logo.png"/></a><!-- MPWiK icon -->
 
 		<h1>Miejskie Przedsiębiorstwo Wodociągów i Kanalizacji w Rzeszowie</h1>
 
-		<img src="photos/hamburger.png" alt="rozwiń menu" id="hamburger" onclick="show_menu()"> <!-- hamburger -->
+		<img alt="rozwiń menu" id="hamburger" onclick="show_menu()" src="photos/hamburger.png"><!-- hamburger -->
 
-		<i class="fas fa-adjust" id="contrast_mode" onclick="set_inverted_colors()"></i> <!-- contrast -->
- 		
- 		<div id="font_size"> <!-- font sizes -->
+		<i class="fas fa-adjust" id="contrast_mode" onclick="set_inverted_colors()"></i><!-- contrast -->
+
+		<div id="font_size"><!-- font sizes -->
 			<span onclick="set_font_size(0.8)">A</span><!--
-		 --><span onclick="set_font_size(1)">A</span><!--
-		 --><span onclick="set_font_size(1.2)">A</span>
-		</div> <!-- /font sizes -->
+            --><span onclick="set_font_size(1)">A</span><!--
+            --><span onclick="set_font_size(1.2)">A</span>
+        </div><!-- /font sizes -->
 
-		<a href="tel:994" id="call_button"> <!-- call button -->
-			<i class="fas fa-phone">994</i>
-			<div>
-				<span>Pogotowie</span>
-				<br>
-				<span>wodociągowo-kanalizacyjne</span>
-			</div>
-		</a> <!-- /call buton -->
-		
-		<div id="menu" class="hidden_m_s"> <!-- menu -->
-			<a href="dla_klienta">Dla Klienta</a><!--
-		 --><a href="aktualnosci">Aktualności</a><!--
-		 --><a href="uslugi">Usługi</a><!--
-		 --><a href="woda">Woda</a><!--
-		 --><a href="o_firmie">O Firmie</a><!--
-		 --><a href="kontakt">Kontakt</a>
-		</div> <!-- /menu -->
-	</header>
-	<div class="horizontal_line_header"></div> <!-- horizontal line -->
+        <a href="tel:994" id="call_button"><!-- call button -->
+            <i class="fas fa-phone">994</i>
+            <div>
+                <span>Pogotowie</span>
+                <br>
+                <span>wodociągowo-kanalizacyjne</span>
+            </div>
+        </a><!-- /call buton -->
 
-	<div style="height: 400px;"></div>
+        <div class="hidden_m_s" id="menu"><!-- menu -->
+            <a href="dla_klienta">Dla Klienta</a><!--
+            --><a href="aktualnosci">Aktualności</a><!--
+            --><a href="uslugi">Usługi</a><!--
+            --><a href="woda">Woda</a><!--
+            --><a href="o_firmie">O Firmie</a><!--
+            --><a href="kontakt">Kontakt</a>
+        </div><!-- /menu -->
+    </header>
+    <div class="horizontal_line_header"></div><!-- horizontal line -->
 
-	<footer>
-		<div class="horizontal_line"></div> <!-- horizontal line -->
+    <div id="content">
+        <a id="animation"><div></div></a> <!-- animation -->
 
-		<div>
-			<a href="dla_klienta">Dla Klienta</a>
+        <div class="animation_buttons"> <!-- change slide buttons 1 -->
+            <span onclick="set_slide_2()"></span>
+            <span class="current_slide" onclick="set_slide_1()"></span>
+        </div><!-- /change slide buttons 1 -->
 
-			<a href="">Ceny</a>
-			<a href="">iBOK</a>
-			<a href="">eFaktura</a>
-			<a href="">Druki Do Pobrania</a>
-		</div>
-		<div>
-			<a href="uslugi">Usługi</a>
+        <div id="gallery"> <!-- gallery -->
+            <a href="dla_klienta">Dla Klienta</a>
+            <a href="galeria">Galeria</a>
+        </div> <!-- /gallery -->
 
-			<a href="">Labolatoryjne</a>
-			<a href="">Geodezyjne</a>
-			<a href="">Projektowe</a>
-			<a href="">Elektryczne</a>
-			<a href="">Mechaniczne</a>
-			<a href="">Wodno - Kanalizacyjne</a>
-			<a href="">Przyjmowanie Odpadów</a>
-			<a href="">Przyjmowanie Nieczystości ciekłych</a>
-		</div>
-		<div>
-			<a href="aktualnosci">Aktualności</a>
+        <div class="animation_buttons"><!-- change slide buttons 2 -->
+            <span onclick="set_slide_2()"></span>
+            <span class="current_slide" onclick="set_slide_1()"></span>
+        </div><!-- /change slide buttons 2 -->
 
-			<a href="">Awarie I Remonty</a>
-			<a href="">Przetargi</a>
-			<a href="">Praca</a>
-			<a href="">Platforma Zakupowa</a>
-		</div>
-		<div>
-			<a href="woda">Woda</a>
+        <div id="news"> <!-- news -->
+            <a href="">
+                <span>Planowane Wyłączenie</span>
+                <br>
+                <span>28.06.2021</span>
+                <br>
+                <span>Przerwa w dostawie wody przy ul. Uroczej w godzinach 08:00 - 14:00 w dniu 30 czerwca<br>Przerwa w dostawie wody przy ul. Uroczej w godzinach 08:00 - 14:00 w dniu 30 czerwca</span>
+            </a>
+            <a href="">
+                <span>Planowane Wyłączenie</span>
+                <br>
+                <span>28.06.2021</span>
+                <br>
+                <span>Przerwa w dostawie wody przy ul. Uroczej w godzinach 08:00 - 14:00 w dniu 30 czerwca</span>
+            </a>
+            <a href="">
+                <span>Planowane Wyłączenie</span>
+                <br>
+                <span>28.06.2021</span>
+                <br>
+                <span>Przerwa w dostawie wody przy ul. Uroczej w godzinach 08:00 - 14:00 w dniu 30 czerwca</span>
+            </a>
+            <a href="">
+                <span>Planowane Wyłączenie</span>
+                <br>
+                <span>28.06.2021</span>
+                <br>
+                <span>Przerwa w dostawie wody przy ul. Uroczej w godzinach 08:00 - 14:00 w dniu 30 czerwca</span>
+            </a>
+        </div> <!-- /news -->
 
-			<a href="">Jakość Wody</a>
-			<a href="">Zakład Uzdatniania Wody</a>
-			<a href="">Sieci Wodociągowe</a>
-			<a href="">Labolatorium</a>
-			<a href="">Odpowiedzialność - Dystrybucja Wody</a>
-		</div>
-		<div>
-			<a href="o_firmie">O Firmie</a>
+        <div class="horizontal_line"></div>
 
-			<a href="">Historia</a>
-			<a href="">Władze Spółki</a>
-			<a href="">Struktura Organizacyjna</a>
-			<a href="">Nagrody I Wyróżnienia</a>
-			<a href="">Multireportaż</a>
-			<a href="">Inwestycje Unii Europejskiej</a>
-			<a href="">Oczyszczalnie Ścieków</a>
-		</div>
-		<div>
-			<a href="kontakt">Kontakt</a>
+        <div id="miscellaneous">
+            <a href="">
+                <span>Woda</span>
+                <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar in sem in egestas. In suscipit tempor purus et bibendum. Nam molestie congue enim, vel consectetur sapien convallis aliquet.</span>
+            </a><!--
+         --><a href="">
+                <span>Galeria</span>
+                <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar in sem in egestas. In suscipit tempor purus et bibendum. Nam molestie congue enim, vel consectetur sapien convallis aliquet.</span>
+            </a><!--
+         --><a href="">
+                <span>MPWiK w mediach</span>
+                <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar in sem in egestas. In suscipit tempor purus et bibendum. Nam molestie congue enim, vel consectetur sapien convallis aliquet.</span>
+            </a><!--
+         --><a href="">
+                <span>Praca</span>
+                <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar in sem in egestas. In suscipit tempor purus et bibendum. Nam molestie congue enim, vel consectetur sapien convallis aliquet.</span>
+            </a>
+        </div>
 
-			<a href="tel:178509600">Centrala<br><i class="fas fa-phone"> 178509600</i></a>
-			<a href="tel:178509653">Kasa<br><i class="fas fa-phone"> 178509653</i></a>
-			<a href="tel:178509726">Biuro Obsługi Klienta<br><i class="fas fa-phone"> 178509726</i></a>
-			<a href="tel:178509662">Sekretariat<br><i class="fas fa-phone"> 178509662</i></a>
-		</div>
-	</footer>
-	<script src="scripts/scripts.js"></script>
+         <div id="must_see">
+            <div>Warto odwiedzić</div>
+            <a href="">Biuletyn Informacji Publicznej<img src="photos/bip_logo.png"></a>
+            <a href=""><span>Internetowe Biuro Obsługi Klienta</span><img src="photos/ibok_logo.png"></a>
+            <a href="">Unia Europejska<img src="photos/ue_logo.png"></a>
+            <br>
+            <a href=""><span>Internetowe Biuro Obsługi Klienta</span><img src="photos/ibok_logo.png"></a>
+            <br>
+            <a href="">eRzeszów<img src="photos/erzeszow_logo.png"></a>
+            <a href="">ZSKU Rzeszów<img src="photos/zsku_logo.png"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="horizontal_line"></div>
+
+        <div>
+            <a href="dla_klienta">Dla Klienta</a>
+
+            <a href="">Ceny</a>
+            <a href="">iBOK</a>
+            <a href="">eFaktura</a>
+            <a href="">Druki Do Pobrania</a>
+        </div>
+        <div>
+            <a href="uslugi">Usługi</a>
+
+            <a href="">Labolatoryjne</a>
+            <a href="">Geodezyjne</a>
+            <a href="">Projektowe</a>
+            <a href="">Elektryczne</a>
+            <a href="">Mechaniczne</a>
+            <a href="">Wodno - Kanalizacyjne</a>
+            <a href="">Przyjmowanie Odpadów</a>
+            <a href="">Przyjmowanie Nieczystości ciekłych</a>
+        </div>
+        <div>
+            <a href="aktualnosci">Aktualności</a>
+
+            <a href="">Awarie I Remonty</a>
+            <a href="">Przetargi</a>
+            <a href="">Praca</a>
+            <a href="">Platforma Zakupowa</a>
+        </div>
+        <div>
+            <a href="woda">Woda</a>
+
+            <a href="">Jakość Wody</a>
+            <a href="">Zakład Uzdatniania Wody</a>
+            <a href="">Sieci Wodociągowe</a>
+            <a href="">Labolatorium</a>
+            <a href="">Odpowiedzialność - Dystrybucja Wody</a>
+        </div>
+        <div>
+            <a href="o_firmie">O Firmie</a>
+
+            <a href="">Historia</a>
+            <a href="">Władze Spółki</a>
+            <a href="">Struktura Organizacyjna</a>
+            <a href="">Nagrody I Wyróżnienia</a>
+            <a href="">Multireportaż</a>
+            <a href="">Inwestycje Unii Europejskiej</a>
+            <a href="">Oczyszczalnie Ścieków</a>
+        </div>
+        <div>
+            <a href="kontakt">Kontakt</a>
+
+            <a href="tel:178509600">Centrala<br><i class="fas fa-phone"> 178509600</i></a>
+            <a href="tel:178509653">Kasa<br><i class="fas fa-phone"> 178509653</i></a>
+            <a href="tel:178509726">Biuro Obsługi Klienta<br><i class="fas fa-phone"> 178509726</i></a>
+            <a href="tel:178509662">Sekretariat<br><i class="fas fa-phone"> 178509662</i></a>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js">
+    </script>
 </body>
 </html>

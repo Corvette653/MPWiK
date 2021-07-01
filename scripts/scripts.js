@@ -2,14 +2,59 @@ var hamburger = document.getElementById("hamburger");
 var menu = document.getElementById("menu");
 var contrast = document.getElementById("contrast_mode");
 var logo = document.getElementById("logo");
+var animation = document.querySelector("#animation div");
+var animation_link = document.getElementById("animation");
+var animation_pointer_1 = document.querySelector(".animation_buttons:nth-of-type(1) span:nth-of-type(2)");
+var animation_pointer_2 = document.querySelector(".animation_buttons:nth-of-type(1) span:nth-of-type(1)");
+var animation_pointer_3 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(2)");
+var animation_pointer_4 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(1)");
 
 
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	set_inverted_colors();
-	document.getElementsByTagName("link")[2].href = "photos/logo_inverted.png"
+// if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+// 	set_inverted_colors();
+// 	document.getElementsByTagName("link")[2].href = "photos/logo_inverted.png"
+// }
+// else {
+// 	set_normal_colors();
+// }
+
+var animationId = window.setInterval(animate, 10000);
+
+function animate() {
+	if(animation.style["background-position-x"] == "100%") {
+		animation.style["background-position-x"] = "0px";
+		animation_link.removeAttribute('href');
+		animation_pointer_1.classList.add('current_slide');
+		animation_pointer_3.classList.add('current_slide');
+		animation_pointer_2.classList.remove('current_slide');
+		animation_pointer_4.classList.remove('current_slide');
+	}
+	else {
+		animation.style["background-position-x"] = "100%";
+		animation_link.setAttribute('href', 'dla_klienta');
+		animation_pointer_1.classList.remove('current_slide');
+		animation_pointer_3.classList.remove('current_slide');
+		animation_pointer_2.classList.add('current_slide');
+		animation_pointer_4.classList.add('current_slide');
+	}
 }
-else {
-	set_normal_colors();
+
+function set_slide_1() {
+	animation.style["background-position-x"] = "0px";
+	animation_link.removeAttribute('href');
+	animation_pointer_1.classList.add('current_slide');
+	animation_pointer_3.classList.add('current_slide');
+	animation_pointer_2.classList.remove('current_slide');
+	animation_pointer_4.classList.remove('current_slide');
+}
+
+function set_slide_2() {
+	animation.style["background-position-x"] = "100%";
+	animation_link.setAttribute('href', 'dla_klienta');
+	animation_pointer_1.classList.remove('current_slide');
+	animation_pointer_3.classList.remove('current_slide');
+	animation_pointer_2.classList.add('current_slide');
+	animation_pointer_4.classList.add('current_slide');
 }
 
 function show_menu() {
@@ -24,7 +69,7 @@ function hide_menu() {
 
 function set_inverted_colors() {
 	contrast.setAttribute('onclick', 'set_normal_colors()');
-	document.documentElement.style.setProperty('--menu-color', '#cfcc7b');
+	document.documentElement.style.setProperty('--menu-color', '#dbdd8a');
 	document.documentElement.style.setProperty('--hoovered-menu-color', '#ef7948');
 	document.documentElement.style.setProperty('--white-color', 'black');
 	document.documentElement.style.setProperty('--red-color', 'aqua');
@@ -41,7 +86,7 @@ function set_inverted_colors() {
 
 function set_normal_colors() {
 	contrast.setAttribute('onclick', 'set_inverted_colors()');
-	document.documentElement.style.setProperty('--menu-color', '#303384');
+	document.documentElement.style.setProperty('--menu-color', '#252376');
 	document.documentElement.style.setProperty('--hoovered-menu-color', '#1086b7');
 	document.documentElement.style.setProperty('--white-color', 'white');
 	document.documentElement.style.setProperty('--red-color', 'red');
