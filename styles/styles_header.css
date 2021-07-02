@@ -1,4 +1,4 @@
-:root {
+/*:root {
 	--font-size: 1;
 	--menu-color: #252376;
 	--hoovered-menu-color: #1086b7;
@@ -15,7 +15,7 @@
 	--gallery-background-color_3: rgba(16, 134, 183, 0.7);
 	--gallery-background-color_4: rgba(16, 134, 183, 0.4);
 	--gallery-background-color_5: rgba(16, 134, 183, 1);
-}
+}*/
 * {
 	margin: 0px;
 	padding: 0px;

@@ -9,14 +9,49 @@ var animation_pointer_1 = document.querySelector(".animation_buttons:nth-of-type
 var animation_pointer_2 = document.querySelector(".animation_buttons:nth-of-type(1) span:nth-of-type(1)");
 var animation_pointer_3 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(2)");
 var animation_pointer_4 = document.querySelector(".animation_buttons:nth-of-type(3) span:nth-of-type(1)");
+var cookies = ['', ''];
+var date = new Date();
+
+date.setTime(date.getTime() + (30*24*60*60*1000));
+// document.cookie = "style=light;expires=" + date + ";path=/";
+// document.cookie = "font_size=1;expires=" + date + ";path=/";
+var cookie = document.cookie;
+cookie = cookie.split(';');
+for(var i = 0; i <cookie.length; i++) {
+	while (cookie[i].charAt(0) == ' ') {
+		cookie[i] = cookie[i].substring(1);
+	}
+	if (cookie[i].indexOf("style") != -1) {
+		cookies[0] = cookie[i].substring(6, cookie[i].length);
+	}
+	if (cookie[i].indexOf("font_size") != -1) {
+		cookies[1] = cookie[i].substring(10, cookie[i].length);
+	}
+}
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	// set_inverted_colors();
 	document.getElementsByTagName("link")[0].href = "photos/logo_inverted.png";
+	if (cookies[0] == '') {
+		set_inverted_colors();
+	}
 }
 else {
-	// set_normal_colors();
 	document.getElementsByTagName("link")[0].href = "photos/logo.png";
+	if (cookies[0] == '') {
+		set_normal_colors();
+	}
+}
+if(cookies[0] == 'dark') {
+	set_inverted_colors();
+}
+else if (cookies[0] == 'light') {
+	set_normal_colors();
+}
+if (cookies[1] != '') {
+	set_font_size(cookies[1]);
+}
+else {
+	set_font_size("1");
 }
 
 var animationId = window.setInterval(animate, 10000);
@@ -92,6 +127,7 @@ function set_inverted_colors() {
 	logo.setAttribute('src', 'photos/logo_inverted.png');
 	hamburger.setAttribute('src', 'photos/hamburger_inverted.png');
 	zsku.setAttribute('src', 'photos/zsku_logo_inverted.png');
+	document.cookie = "style=dark;expires=" + date + ";path=/";
 }
 
 function set_normal_colors() {
@@ -114,6 +150,7 @@ function set_normal_colors() {
 	logo.setAttribute('src', 'photos/logo.png');
 	hamburger.setAttribute('src', 'photos/hamburger.png');
 	zsku.setAttribute('src', 'photos/zsku_logo.png');
+	document.cookie = "style=light;expires=" + date + ";path=/";
 }
 
 function set_font_size(x) {
@@ -133,4 +170,5 @@ function set_font_size(x) {
 		document.querySelector("#font_size span:nth-of-type(2)").style["color"] = "var(--black-color)";
 		document.querySelector("#font_size span:nth-of-type(3)").style["color"] = "var(--red-color)";
 	}
+	document.cookie = "font_size=" + x + ";expires=" + date + ";path=/";
 }
