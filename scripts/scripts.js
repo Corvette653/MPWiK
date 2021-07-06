@@ -67,7 +67,7 @@ function animate() {
 	}
 	else {
 		animation.style["background-position-x"] = "100%";
-		animation_link.setAttribute('href', 'dla_klienta');
+		animation_link.setAttribute('href', '/MPWiK/dla_klienta/');
 		animation_pointer_1.classList.remove('current_slide');
 		animation_pointer_3.classList.remove('current_slide');
 		animation_pointer_2.classList.add('current_slide');
