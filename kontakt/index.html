@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>MPWiK</title>
+    <link disabled-href="photos/logo.png" rel="icon" sizes="1024x1016" type="image/png"/>
+    <link href="styles/styles_header.css" rel="stylesheet"/>
+    <link href="styles/styles_footer.css" rel="stylesheet"/>
+    <link href="styles/styles.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/ec16570d0b.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/"><img alt="logo MPWiK" id="logo" src="photos/logo.png"/></a><!-- MPWiK icon -->
+
+        <h1>Miejskie Przedsiębiorstwo Wodociągów i Kanalizacji w Rzeszowie</h1>
+
+        <img alt="rozwiń menu" id="hamburger" onclick="show_menu()" src="photos/hamburger.png"><!-- hamburger -->
+
+        <i class="fas fa-adjust" id="contrast_mode" onclick="set_inverted_colors()"></i><!-- contrast -->
+
+        <div id="font_size"><!-- font sizes -->
+            <span onclick="set_font_size(0.8)">A</span><!--
+            --><span onclick="set_font_size(1)">A</span><!--
+            --><span onclick="set_font_size(1.2)">A</span>
+        </div><!-- /font sizes -->
+
+        <a href="tel:994" id="call_button"><!-- call button -->
+            <i class="fas fa-phone">994</i>
+            <div>
+                <span>Pogotowie</span>
+                <br>
+                <span>wodociągowo-kanalizacyjne</span>
+            </div>
+        </a><!-- /call buton -->
+
+        <div class="hidden_m_s" id="menu"><!-- menu -->
+            <a href="/dla_klienta/">Dla Klienta</a><!--
+            --><a href="/aktualnosci/">Aktualności</a><!--
+            --><a href="/uslugi/">Usługi</a><!--
+            --><a href="/woda/">Woda</a><!--
+            --><a href="/o_firmie/">O Firmie</a><!--
+            --><a href="/kontakt/">Kontakt</a>
+        </div><!-- /menu -->
+    </header>
+    <div class="horizontal_line_header"></div><!-- horizontal line -->
+
+    <div id="content">
+        <div id="path">
+            <a href="/">Strona Główna</a>
+            <span> > Kontakt</span>
+        </div>
+
+        <div id="important_numbers">
+            <h2>Najważniejsze telefony</h2>
+            <a href="tel:178509600">Centrala<br><i class="fas fa-phone"> 178509600</i></a>
+            <a href="tel:178509653">Kasa<br><i class="fas fa-phone"> 178509653</i></a>
+            <a href="tel:178509726">Biuro Obsługi Klienta<br><i class="fas fa-phone"> 178509726</i></a>
+            <a href="tel:178509662">Sekretariat<br><i class="fas fa-phone"> 178509662</i></a>
+        </div>
+
+        <div id="contact_details">
+            <h2>Dane teleadresowe</h2>
+            <div>
+                <span>ul. Naruszewicza 18</span>
+                <span>35-055 Rzeszów</span>
+                <span>e-mail: sekretariat@mpwik.rzeszow.pl</span>
+                <br>
+                <span>Sąd Rejonowy w Rzeszowie XII Wydział Gospodarczy Krajowego Rejestru Sądowego</span>
+                <span>NIP: 813-33-36-039</span>
+                <span>KRS: 0000185541</span>
+                <span>BDO: 000022197</span>
+                <br>
+                <span>Bank PEKAO S.A. II Oddział Rzeszów</span>
+                <span>29 12402614 1111000039596242</span>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.743294229301!2d22.01119655312569!3d50.034905818712964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfafc207bbb25%3A0xb28c8b0327965311!2sMiejskie%20Przedsi%C4%99biorstwo%20Wodoci%C4%85g%C3%B3w%20i%20Kanalizacji%20Sp.%20z%20o.o.!5e0!3m2!1spl!2spl!4v1625315409085!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <h2>Wszystkie numery</h2>
+        <div id="all_numbers" class="grid" data-masonry='{ "itemSelector": ".grid-item", "percentPosition": true }'>
+            <div class="grid-sizer"></div>
+            <div class="grid-item">
+                <p>Centrala</p>
+                <a href="tel:178509600"><i class="fas fa-phone"></i> 178509600</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Kasa</p>
+                <a href="tel:178509653"><i class="fas fa-phone"></i> 178509653</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Zbytu</p>
+                <a href="mailto:zbyt@mpwik.rzeszow.pl"><nobr><i class="fas fa-envelope"></i> zbyt@mpwik.rzeszow.pl</nobr></a>
+                <span>
+                    <p>Kierownik działu, zastępca kierownika</p>
+                    <a href="tel:178509670"><i class="fas fa-phone"></i> 178509670</a>
+                    <p>Zawieranie umów</p>
+                    <a href="tel:178509684"><i class="fas fa-phone"></i> 178509684</a><!--
+                    --><a href="tel:178509602"><i class="fas fa-phone"></i> 178509602</a><!--
+                    --><a href="tel:178509647"><i class="fas fa-phone"></i> 178509647</a>
+                    <p>Przyjmowanie odczytów, wystawianie faktur/płatności przez ROR</p>
+                    <a href="tel:178509601"><i class="fas fa-phone"></i> 178509601</a><!--
+                    --><a href="tel:178509675"><i class="fas fa-phone"></i> 178509675</a><!--
+                    --><a href="tel:178509641"><i class="fas fa-phone"></i> 178509641</a><!--
+                    --><a href="tel:178509640"><i class="fas fa-phone"></i> 178509640</a><!--
+                    --><a href="tel:178509605"><i class="fas fa-phone"></i> 178509605</a><!--
+                    --><a href="tel:178509631"><i class="fas fa-phone"></i> 178509631</a>
+                    <p>Windykacja należności</p>
+                    <a href="tel:178509665"><i class="fas fa-phone"></i> 178509665</a><!--
+                    --><a href="tel:178509690"><i class="fas fa-phone"></i> 178509690</a>
+                    <p>Mistrzowie</p>
+                    <a href="tel:178509685"><i class="fas fa-phone"></i> 178509685</a>
+                    <p>Wodomierze</p>
+                    <a href="tel:178509722"><i class="fas fa-phone"></i> 178509722</a><!--
+                    --><a href="tel:178509709"><i class="fas fa-phone"></i> 178509709</a>
+                </span>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Biuro Obsługi Klienta</p>
+                <span>
+                    <p>Dziennik Podawczy</p>
+                    <a href="tel:178509653"><i class="fas fa-phone"></i> 178509653</a>
+                    <br>
+                    <a href="mailto:bok.dp@mpwik.rzeszow.pl"><nobr><i class="fas fa-envelope"></i> bok.dp@mpwik.rzeszow.pl</nobr></a>
+                    <p>Zawieranie Umów</p>
+                    <a href="tel:178509653"><i class="fas fa-phone"></i> 178509653</a>
+                    <br>
+                    <a href="mailto:bok.umowy@mpwik.rzeszow.pl"><nobr><i class="fas fa-envelope"></i> bok.umowy@mpwik.rzeszow.pl</nobr></a>
+                </span>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Techniczny</p>
+                <a href="tel:178509667"><i class="fas fa-phone"></i> 178509667</a><!--
+                --><a href="tel:178509676"><i class="fas fa-phone"></i> 178509676</a><!--
+                --><a href="tel:178509616"><i class="fas fa-phone"></i> 178509616</a><!--
+                --><a href="tel:178509715"><i class="fas fa-phone"></i> 178509715</a><!--
+                --><a href="tel:178509723"><i class="fas fa-phone"></i> 178509723</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Sieci Wod-Kan</p>
+                <span>
+                    <p>Usługi</p>
+                    <a href="tel:178509618"><i class="fas fa-phone"></i> 178509618</a>
+                    <p>Odbiory Techniczne</p>
+                    <a href="tel:178509603"><i class="fas fa-phone"></i> 178509603</a>
+                    <p>Geodezja</p>
+                    <a href="tel:178509633"><i class="fas fa-phone"></i> 178509633</a>
+                </span>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Ochrony Środowiska</p>
+                <a href="tel:178509686"><i class="fas fa-phone"></i> 178509686</a>
+                <a href="tel:178509689"><i class="fas fa-phone"></i> 178509689</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Transportu</p>
+                <a href="tel:178509655"><i class="fas fa-phone"></i> 178509655</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Inwestycji Remontów i Zaopatrzenia</p>
+                <a href="tel:178509644"><i class="fas fa-phone"></i> 178509644</a>
+                <a href="tel:178509637"><i class="fas fa-phone"></i> 178509637</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Zaklad Uzdatniania Wody</p>
+                <a href="tel:178509854"><i class="fas fa-phone"></i> 178509854</a>
+                <a href="tel:178509858"><i class="fas fa-phone"></i> 178509858</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Laboratorium Wody - ZUW</p>
+                <a href="tel:178509866"><i class="fas fa-phone"></i> 178509866</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Oczyszczalnia Ścieków</p>
+                <a href="tel:178509801"><i class="fas fa-phone"></i> 178509801</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Laboratorium Ścieków</p>
+                <a href="tel:178509804"><i class="fas fa-phone"></i> 178509804</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Głównego Mechanika</p>
+                <a href="tel:178509862"><i class="fas fa-phone"></i> 178509862</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Serwis Pomp FLYGT</p>
+                <a href="tel:178509872"><i class="fas fa-phone"></i> 178509872</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Głównego Energetyka</p>
+                <a href="tel:178509706"><i class="fas fa-phone"></i> 178509706</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Spraw Pracowniczych i Szkoleniowych</p>
+                <a href="tel:178509657"><i class="fas fa-phone"></i> 178509657</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Jednostka Readivzujaca Projekt (PIU)</p>
+                <a href="tel:178509606"><i class="fas fa-phone"></i> 178509606</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Finansowo Księgowy</p>
+                <span>
+                    <p>Kierownik Działu</p>
+                    <a href="tel:178509615"><i class="fas fa-phone"></i> 178509615</a>
+                    <p>Zastępca Kierownika</p>
+                    <a href="tel:178509635"><i class="fas fa-phone"></i> 178509635</a>
+                    <p>Rozrachunki z Klientami</p>
+                    <a href="tel:178509697"><i class="fas fa-phone"></i> 178509697</a>
+                </span>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Stanowisko d/s BHP</p>
+                <a href="tel:178509632"><i class="fas fa-phone"></i> 178509632</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Administracyjno Gospodarczy</p>
+                <a href="tel:178509624"><i class="fas fa-phone"></i> 178509624</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Dział Obsługi Komputerowej</p>
+                <a href="tel:178509694"><i class="fas fa-phone"></i> 178509694</a>
+                <div></div>
+            </div>
+            <div class="grid-item">
+                <p>Sekretariat</p>
+                <a href="tel:178509662"><i class="fas fa-phone"></i> 178509662</a>
+                <br>
+                <a style="cursor: pointer;"><nobr><i class="fas fa-fax"></i> 178509658&nbsp;(fax)</nobr></a>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="horizontal_line"></div>
+
+        <div>
+            <a href="/dla_klienta/">Dla Klienta</a>
+
+            <a href="">Ceny</a>
+            <a href="https://ibok.mpwik.rzeszow.pl/Login.aspx">iBOK</a>
+            <a href="">eFaktura</a>
+            <a href="">Druki Do Pobrania</a>
+        </div>
+        <div>
+            <a href="/uslugi/">Usługi</a>
+
+            <a href="">Labolatoryjne</a>
+            <a href="">Geodezyjne</a>
+            <a href="">Projektowe</a>
+            <a href="">Elektryczne</a>
+            <a href="">Mechaniczne</a>
+            <a href="">Wodno - Kanalizacyjne</a>
+            <a href="">Przyjmowanie Odpadów</a>
+            <a href="">Przyjmowanie Nieczystości ciekłych</a>
+        </div>
+        <div>
+            <a href="/aktualnosci/">Aktualności</a>
+
+            <a href="">Awarie I Remonty</a>
+            <a href="">Przetargi</a>
+            <a href="">Praca</a>
+            <a href="">Platforma Zakupowa</a>
+        </div>
+        <div>
+            <a href="/woda/">Woda</a>
+
+            <a href="">Jakość Wody</a>
+            <a href="">Zakład Uzdatniania Wody</a>
+            <a href="">Sieci Wodociągowe</a>
+            <a href="">Labolatorium</a>
+            <a href="">Odpowiedzialność - Dystrybucja Wody</a>
+        </div>
+        <div>
+            <a href="/o_firmie/">O Firmie</a>
+
+            <a href="">Historia</a>
+            <a href="">Władze Spółki</a>
+            <a href="">Struktura Organizacyjna</a>
+            <a href="">Nagrody I Wyróżnienia</a>
+            <a href="">Multireportaż</a>
+            <a href="">Inwestycje Unii Europejskiej</a>
+            <a href="">Oczyszczalnie Ścieków</a>
+        </div>
+        <div>
+            <a href="/kontakt/">Kontakt</a>
+
+            <a href="tel:178509600">Centrala<br><i class="fas fa-phone"> 178509600</i></a>
+            <a href="tel:178509653">Kasa<br><i class="fas fa-phone"> 178509653</i></a>
+            <a href="tel:178509726">Biuro Obsługi Klienta<br><i class="fas fa-phone"> 178509726</i></a>
+            <a href="tel:178509662">Sekretariat<br><i class="fas fa-phone"> 178509662</i></a>
+        </div>
+    </footer>
+    <script src="scripts/masonry.pkgd.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
