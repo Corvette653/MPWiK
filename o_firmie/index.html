@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>MPWiK</title>
+    <link disabled-href="photos/logo.png" rel="icon" sizes="1024x1016" type="image/png"/>
+    <link href="styles/styles_header.css" rel="stylesheet"/>
+    <link href="styles/styles_footer.css" rel="stylesheet"/>
+    <link href="styles/styles.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/ec16570d0b.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/MPWiK/"><img alt="logo MPWiK" id="logo"/></a><!-- MPWiK icon -->
+
+        <h1>Miejskie Przedsiębiorstwo Wodociągów i Kanalizacji w Rzeszowie</h1>
+
+        <img alt="rozwiń menu" id="hamburger" onclick="show_menu()"><!-- hamburger -->
+
+        <i class="fas fa-adjust" id="contrast_mode" onclick="set_inverted_colors()"></i><!-- contrast -->
+
+        <div id="font_size"><!-- font sizes -->
+            <span onclick="set_font_size(0.8)">A</span><!--
+            --><span onclick="set_font_size(1)">A</span><!--
+            --><span onclick="set_font_size(1.2)">A</span>
+        </div><!-- /font sizes -->
+
+        <a href="tel:994" id="call_button"><!-- call button -->
+            <i class="fas fa-phone">994</i>
+            <div>
+                <span>Pogotowie</span>
+                <br>
+                <span>wodociągowo-kanalizacyjne</span>
+            </div>
+        </a><!-- /call buton -->
+
+        <div class="hidden_m_s" id="menu"><!-- menu -->
+            <a href="/MPWiK/dla_klienta/">Dla Klienta</a><!--
+            --><a href="/MPWiK/aktualnosci/">Aktualności</a><!--
+            --><a href="/MPWiK/uslugi/">Usługi</a><!--
+            --><a href="/MPWiK/woda/">Woda</a><!--
+            --><a href="/MPWiK/o_firmie/">O Firmie</a><!--
+            --><a href="/MPWiK/kontakt/">Kontakt</a>
+        </div><!-- /menu -->
+    </header>
+    <div class="horizontal_line_header"></div><!-- horizontal line -->
+
+    <div id="content">
+        <div id="path">
+            <a href="/MPWiK/">Strona Główna</a>
+            <span> > O Firmie</span>
+        </div>
+        <div id="sidebar" class="hidden_sidebar">
+            <a href="/MPWiK/o_firmie/" class="current_page">O Firmie<i class="fas fa-caret-right"></i></a>
+            <div class="horizontal_line"></div>
+            <a href="/MPWiK/o_firmie/historia/">Historia<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/wladze/">Władze spółki<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/struktura_organizacyjna/">Struktura organizacyjna<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/nagrody/">Nagrody i wyróżnienia<i class="fas fa-caret-right"></i></a>
+            <a href="https://rzeszow.wyborcza.pl/multimedia/mpwik/slajd/1">Multireportaż<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/mpwik_w_mediach/">MPWiK w mediach<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/inwestycje_ue/">Inwestycje UE<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/oczyszczalnie_sciekow/">Oczyszczalnie ścieków<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/rodo/">RODO<i class="fas fa-caret-right"></i></a>
+            <a href="/MPWiK/o_firmie/deklaracja_dostepnosci/">Deklaracja dostępności<i class="fas fa-caret-right"></i></a>
+        </div>
+        <div id="description">
+            <h2>O Firmie</h2>
+            <div class="horizontal_line"></div>
+            <p>Miejskie Przedsiębiorstwo Wodociągów i Kanalizacji powstało w 1934 r.  Od 1994 r. do 2003 r. działało w strukturze Rzeszowskiej Gospodarki Komunalnej, Spółki z o. o. jako oddział sporządzający odrębne bilanse.</p>
+            <img src="photos/photo1.png" style="margin-top: -10px;">
+            <p>MPWiK Sp. z o. o. powstała 01.01.2004 r. w wyniku podziału Rzeszowskiej Gospodarki Komunalnej Sp. z o. o. w  Rzeszowie przez wydzielenie i przeniesienie majątku Oddziału MPWiK na spółkę nowo zawiązaną.</p>
+            <p>MPWiK  jest samodzielną spółką prawa handlowego, w której 100% udziałów posiada Gmina Miasto Rzeszów. Prezydent Miasta pełni funkcję Zgromadzenia Wspólników.</p>
+            <p>MPWiK Sp. z o.o. nie posiada oddziałów sporządzających odrębne bilanse.</p>
+            <p style="clear: both;">
+                <span>Naszą misją jest dostarczanie dobrej, zdrowej wody każdego dnia i oczyszczanie ścieków do ostatniej kropli.</span>
+                <br>
+                Świadcząc usługi na najwyższym poziomie współtworzymy przyjazne środowisko.
+            </p>
+            <p>
+                Jesteśmy po to, by służyć naszym Klientom.
+                <br>
+                Wdrażamy innowacyjne rozwiązania.
+                <br>
+                Jesteśmy aktywnym partnerem dla lokalnych społeczności.
+                <br>
+                Odnosimy sukcesy dzięki naszym pracownikom.
+                <br>
+                <span>Woda jest dla Ciebie, ścieki oddaj nam.</span>
+            </p>
+            <p>Obszar działania MPWiK  obejmuje nie tylko teren samego miasta Rzeszowa  lecz także niektóre miejscowości sąsiednich gmin.</p>
+            <p style="font-weight: bold; color: var(--footer-header-color);">Podstawa prawna powołania i funkcjonowania spółki:</p>
+            <ul>
+                <li>Ustawa z dnia 15.09.2000 r. Kodeks spółek handlowych (Dz. U. Nr 94 poz. 1037 z późn. zmianami)</li>
+                <li>Ustawa z dnia 7.06.2002 r. o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków (Dz.U. Nr. 72, poz. 747) i przepisy wykonawcze do tej ustawy</li>
+                <li>Akt Założycielski Spółki z o.o. sporządzony w dniu 06.12.2004 r. w Kancelarii Notarialnej w Rzeszowie ul. Jagiellońska 9, notariusz Alicja Mąkosz (Rep. A nr 8694/2003)</li>
+                <li>Uchwała Rady Miasta nr XI/119/2003 z dnia 17 lipca 2003 r.</li>
+                <li>KRS nr 0000185541</li>
+            </ul>
+        </div>
+        <div id="sidebar_arrow" onclick="show_sidebar()"><i class="fas fa-chevron-circle-right"></i></div>
+        <div style="clear: both; height: 0px;"></div>
+    </div>
+
+    <footer>
+        <div class="horizontal_line"></div>
+
+        <div>
+            <a href="/MPWiK/dla_klienta/">Dla Klienta</a>
+
+            <a href="/MPWiK/dla_klienta/ceny/">Ceny / Taryfy</a>
+            <a href="https://ibok.mpwik.rzeszow.pl/Login.aspx">iBOK</a>
+            <a href="">eFaktura</a>
+            <a href="">Druki Do Pobrania</a>
+        </div>
+        <div>
+            <a href="/MPWiK/uslugi/">Usługi</a>
+
+            <a href="">Labolatoryjne</a>
+            <a href="">Geodezyjne</a>
+            <a href="">Projektowe</a>
+            <a href="">Elektryczne</a>
+            <a href="">Mechaniczne</a>
+            <a href="">Wodno - Kanalizacyjne</a>
+            <a href="">Przyjmowanie Odpadów</a>
+            <a href="">Przyjmowanie Nieczystości ciekłych</a>
+        </div>
+        <div>
+            <a href="/MPWiK/aktualnosci/">Aktualności</a>
+
+            <a href="">Awarie I Remonty</a>
+            <a href="">Przetargi</a>
+            <a href="">Praca</a>
+            <a href="">Platforma Zakupowa</a>
+        </div>
+        <div>
+            <a href="/MPWiK/woda/">Woda</a>
+
+            <a href="">Jakość Wody</a>
+            <a href="">Zakład Uzdatniania Wody</a>
+            <a href="">Sieci Wodociągowe</a>
+            <a href="">Labolatorium</a>
+            <a href="">Odpowiedzialność - Dystrybucja Wody</a>
+        </div>
+        <div>
+            <a href="/MPWiK/o_firmie/">O Firmie</a>
+
+            <a href="">Historia</a>
+            <a href="">Władze Spółki</a>
+            <a href="">Struktura Organizacyjna</a>
+            <a href="">Nagrody I Wyróżnienia</a>
+            <a href="">Multireportaż</a>
+            <a href="">Inwestycje Unii Europejskiej</a>
+            <a href="">Oczyszczalnie Ścieków</a>
+        </div>
+        <div>
+            <a href="/MPWiK/kontakt/">Kontakt</a>
+
+            <a href="tel:178509600">Centrala<br><i class="fas fa-phone"> 178509600</i></a>
+            <a href="tel:178509653">Kasa<br><i class="fas fa-phone"> 178509653</i></a>
+            <a href="tel:178509726">Biuro Obsługi Klienta<br><i class="fas fa-phone"> 178509726</i></a>
+            <a href="tel:178509662">Sekretariat<br><i class="fas fa-phone"> 178509662</i></a>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
